@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <style>html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #0c4a6e;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    margin: 40px auto;
+    padding: 25px;
+    align-items: center;
+    border: 3px solid #a5f3fc;
+    border-radius: 3px;
+    background-color: deepskyblue;
+}
+
+.message{
+    display: flex;
+    gap: 20px;
+    padding: 8px;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 3px;
+    margin-bottom: 3px;
+}
+
+.from{
+    width: 95px;
+}
+
+.message-text{
+    width: 200px;
+}
+
+.read{
+    font-weight: 400;
+    border: 2px solid #a5f3fc;
+    background-color: white;
+}
+
+.unread{
+    font-weight: 800;
+    border: 2px solid #0369a1;
+    background-color: #a5f3fc;
+}
+</style>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Messages 📩</h1>
+        <div class="message unread">
+            <div class="from" id="message-from-1">Stevie Wonder</div>
+            <div class="message-text" id="message-text-1">I just wrote to say I love you❤️</div>
+            <div class="date" id="message-date-1">28 Aug</div>
+        </div>
+        <div class="message unread">
+            <div class="from" id="message-from-2">Arnie</div>
+            <div class="message-text" id="message-text-2">Hasta la Vista Baby! 😎</div>
+            <div class="date" id="message-date-2">27 Aug</div>
+        </div> 
+        <div class="message unread">
+            <div class="from" id="message-from-3">The Queen</div>
+            <div class="message-text" id="message-text-3">One is not amused 👑</div>
+            <div class="date" id="message-date-3">23 Aug</div>
+        </div>
+        <div class="message unread">
+            <div class="from" id="message-from-4">James Bond</div>
+            <div class="message-text" id="message-text-4">Casino night tonight! 🍹</div>
+            <div class="date" id="message-date-4">20 Aug</div>
+        </div>
+    </div>
+    <script>
+                
+                document.addEventListener('click', function(e){
+        /*
+        Challenge:
+        1. Remove the "unread" class from the 
+        parentElement of the clicked element.
+        */
+            document.getElementById(e.target.id).parentElement.classList.add('read')
+            document.getElementById(e.target.id).parentElement.classList.remove('unread')
+
+        })
+    </script>
+</body>
+
+</html>
